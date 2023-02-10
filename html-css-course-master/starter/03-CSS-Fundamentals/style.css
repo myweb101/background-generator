@@ -1,0 +1,352 @@
+*{
+    /* border-top: 10px solid #1098ad; <- will add border to all elements */
+    margin: 0 auto;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    color: #444;
+    border-top: 10px solid #1098ad;
+    position: relative;
+    /* position: relative; */
+}
+
+.content-container{
+    width: 1200px;
+    margin: auto;
+    
+    /* position: relative;
+     */
+}
+
+.main-header{
+    background-color: #fcf8f8;
+    /* background-color: red; */
+    padding: 18px 10px 18px 18px;
+    margin-bottom: 60px;
+    height: 80px;
+    width: 100%;
+
+}
+
+.post-header{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.post-header .top-title{
+    text-align: center;
+}
+
+nav{
+    font-size: 15px;
+    text-align: center;
+}
+
+.main-header h1{
+    text-align: center;
+    padding-top: 18px;
+}
+
+article{
+    margin-bottom: 65px;
+}
+
+h1,
+h2,
+h3{
+    
+    color: #1098ad;
+}
+
+h1{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+    
+}
+
+
+h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p{
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+ul, 
+ol{
+    margin-left: 50px;
+}
+
+li{
+    font-size: 19px;
+    margin-bottom: 10px;
+    
+}
+
+li:last-child {
+    margin-bottom: 40px;
+}
+
+/* footer p{
+    font-size: 11px;
+    text-align: center;
+} */
+
+/* article header p{
+    font-style: italic
+}*/
+
+#copyright{
+    font-size: 11px;
+    text-align: center;
+}
+
+#author{
+    font-style: italic;
+    font-size:18px;
+    padding-bottom: 30px;
+}
+
+.related-author{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.related-posts{
+    list-style: none;
+    color: rgba(69, 69, 69, 0.6);
+    margin-left: 0;
+
+    /* 183 183 183 <- also a good grey */
+}
+
+
+
+aside{
+    background-color: #eceaea;
+    border-top: 5px solid #1098ad;
+    border-bottom: 5px solid #1098ad;
+    padding: 40px 40px;
+   
+    
+}
+
+li:first-child{
+    font-weight: bold;
+}
+
+
+
+li:nth-child(odd){
+    /* color: red; */
+}
+
+/* article p:first-child{
+    color: rgba(255, 139, 6, 0.925);
+/* } /*misconception and will not work */
+
+article p:last-child{
+    color: orange;
+    text-align: center;
+}
+
+/* Styling for hyperlinks */
+
+a:link{
+    color: #1098ad;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+a:visited{
+    color: #13bed8
+}
+
+a:hover{
+    color:#48c2d4;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: underline solid rgb(216, 104, 63);
+}
+
+a:active{
+
+    background-color: rgb(245, 185, 116);
+    font-style: italic;
+}
+
+/* Resolving conflicts  */
+
+/* #copyright{
+    color: burlywood;  <- ID will tgaske priotity
+}
+
+.copyright{
+    color: red; 
+}
+                            <- out of these two the last class to be
+                             declared will take priority
+.text {
+    color: yellowgreen;
+}
+
+footer p{
+     color: plum !important;  /*<- this will only work if nothing else  */
+                                /* is targeted or !important is used
+                                 (hack use sparingly) */
+
+                                 
+.post-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+
+nav a:link {
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 5px;
+    padding-top: 18px;
+    display: inline-block;
+}
+
+nav a:link:last-child {
+    margin-right: 0;
+}
+
+.like-btn{
+    font-size: 22px;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    /* top:50px;
+    left:50px; */
+    border: 2px solid #000;
+    bottom:-56px;
+    right: 2px;
+    background-color: white;
+    color: black;
+    
+
+}
+
+.like-btn:hover {
+    background-color: white;
+    color: #000; 
+    border: 2px solid red;
+}
+
+/* remove italic from front book image */
+
+h1::first-letter {
+    font-style: normal;
+    margin-right: 6px;
+}
+
+h2::first-letter{
+    font-size: 82px;
+    color: rgb(226, 133, 100);
+
+}
+
+/* h3 + p::first-letter{
+    color: rgb(226, 133, 100); using adjasent sibling element
+    font-size: 30px ;
+} */
+
+.top-title{
+    
+    position: relative;
+}
+
+h2::after {
+    content: "TOP";
+    background-color: #ffe70e;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    top: -10;
+    right: -25;
+    padding: 5px 10px;
+}
+
+.author-img{
+    float: left;
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+
+.author{
+
+    margin-top: 10px;
+    float: left;
+    margin-left: 10px
+
+}
+
+h1{
+    float: left;
+}
+
+nav{
+    float: right;
+   
+}
+
+/* .clear{
+    clear: both; <- bad practice
+} */
+
+.clearfix::after{
+/* To Clear floats do the following: */
+    clear: both;
+    content: "";  /* add clearfix to parent element */
+    display: block; /* add blank content and display block */
+}
+
+
+article {
+  width: 700px;
+  float: left;
+}
+
+aside{
+width: 300px;
+float: right;
+}
+
+footer{  
+  clear: both;
+}
+
+.author-container{
+    position: relative;
+}
